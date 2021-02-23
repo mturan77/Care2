@@ -8,7 +8,7 @@ namespace DataAccess.Abstract
     public interface ICarDal
     {
         List<Car> GetAll();
-        void Add(Car car);
+        void Add(List<Car> car);
         void Update(Car car, Car carToUpdate);
         void Delete(Car car);
 

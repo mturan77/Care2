@@ -2,6 +2,7 @@
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using System;
+using System.Collections.Generic;
 
 namespace ConsoleUI
 {
@@ -40,10 +41,12 @@ namespace ConsoleUI
             car6.ModelYear = 2019;
 
             CarManager carManager = new CarManager(new InMemoryCarDal());
+
+            List<Car> cars = new List<Car>() { car4, car5, car6 };
             
-            carManager.Add(car4);
-            carManager.Add(car5);
-            carManager.Add(car6);
+            carManager.Add(cars);
+            
+
             foreach (var car in carManager.GetAll())
             {
                 Console.WriteLine(car.CarName);

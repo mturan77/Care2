@@ -20,9 +20,9 @@ namespace DataAccess.Concrete.InMemory
             new Car{CarId=3,BrandId=2,CarName="Araç3",ColorId=3,DailyPrice=200,ModelId=2,ModelYear=2015,Description=""}
             };
         }
-        public void Add(Car car)
+        public void Add(List<Car> car)
         {
-            _car.Add(car);
+            _car.AddRange(car);
         }
 
         public void Delete(Car car)

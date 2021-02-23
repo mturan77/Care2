@@ -16,7 +16,7 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
-        public void Add(Car car)
+        public void Add(List<Car> car)
         {
             _carDal.Add(car);
         }
